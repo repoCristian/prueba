@@ -1,0 +1,313 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="736b1aa347ad0cc02b60562823f1ec2654d77d4dedca53e5400dc635edd55b88.html">Register</a></span>
+                > <span class="truncate-60"><a
+                    href="8664c7ce1ba89bfda9870916b754fd7a4827d7eb4ed60bf45c2f83b890d1c43a.html">Sing up </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 03-06-2024 18:13</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Register </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="failing-color">Sing up
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given the user has opened URL<br>When the user enter first product and adds it to the cart<br><table class='embedded'><tbody><tr><td>Amount2</td></tr><tr><td>&lt;amount2&gt;</td></tr></tbody></table><br>And the user enter second product and adds it to the cart<br><table class='embedded'><tbody><tr><td>Amount5</td></tr><tr><td>&lt;amount5&gt;</td></tr></tbody></table><br>Then the user should see 7 products in the cart</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be present exception: Expected condition failed: waiting for By.xpath: //h2[contains(text(),'&Eacute;vora &ndash; 24 rosas')] to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.7.1', revision: 'c6795baf1a3'System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>com.utest2.tasks.cart.CartProductsSelect.performAs(CartProductsSelect.java:32)<br />com.utest2.stepdefinitions.Cart.CartStepDefinitions.theUserEnterSecondProductAndAddsItToTheCart(CartStepDefinitions.java:42)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //h2[contains(text(),'Évora – 24 rosas')] to be present (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.7.1', revision: 'c6795baf1a3'<br>System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.11'<br>Driver info: driver.version: unknown</pre>
+                        <pre>com.utest2.tasks.cart.CartProductsSelect.performAs(CartProductsSelect.java :32)<br />com.utest2.stepdefinitions.Cart.CartStepDefinitions.theUserEnterSecondProductAndAddsItToTheCart(CartStepDefinitions.java :42)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java :129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    <div class="panel-body">
+                        <a href="pagesource6382607634522901181.html" target="_blank" class="btn btn-info">HTML Source</a>
+                    </div>
+            </div>
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="cf74d116cfb890358d89a250bdb882909cacab019330201ea86815468248e380.png" title=" 1: Sing up ({amount2=2, amount5=5})" width="1860"/>
+                <img src="cf74d116cfb890358d89a250bdb882909cacab019330201ea86815468248e380.png" title=" Given the user has opened URL" width="1860"/>
+                <img src="cf74d116cfb890358d89a250bdb882909cacab019330201ea86815468248e380.png" title=" User go to" width="1860"/>
+                <img src="cf74d116cfb890358d89a250bdb882909cacab019330201ea86815468248e380.png" title=" user opens the browser at https://sanangel.com.co/" width="1860"/>
+                <img src="cf74d116cfb890358d89a250bdb882909cacab019330201ea86815468248e380.png" title=" User go to (completed)" width="1860"/>
+                <img src="94a5cdebbc2a8443432b7abf60e418c5ba0ee974bbf471f10835ea54ef5d8e51.png" title=" Given the user has opened URL (completed)" width="1860"/>
+                <img src="94a5cdebbc2a8443432b7abf60e418c5ba0ee974bbf471f10835ea54ef5d8e51.png" title=" When the user enter first product and adds it to the cart
+| Amount2 |
+| 2 |" width="1860"/>
+                <img src="94a5cdebbc2a8443432b7abf60e418c5ba0ee974bbf471f10835ea54ef5d8e51.png" title=" User cart products select" width="1860"/>
+                <img src="94a5cdebbc2a8443432b7abf60e418c5ba0ee974bbf471f10835ea54ef5d8e51.png" title=" user clicks on first" width="1860"/>
+                <img src="e8df874162e4b0b598a3c3e45cb2235209245b1edd6792ab4c009ce336331921.png" title=" user clicks on first (completed)" width="1860"/>
+                <img src="e8df874162e4b0b598a3c3e45cb2235209245b1edd6792ab4c009ce336331921.png" title=" user clicks on first_amount" width="1860"/>
+                <img src="e24aca8988cbab7f8f7b97a554ff3e74166aa18faa505a050544cdaae2e28840.png" title=" user clicks on first_amount (completed)" width="1860"/>
+                <img src="e24aca8988cbab7f8f7b97a554ff3e74166aa18faa505a050544cdaae2e28840.png" title=" user types 'DELETE' in first_amount" width="1860"/>
+                <img src="a29d9571271a3760ec1ee4c3a4d66046161404043a3c9d2730e47cd9ed1151d1.png" title=" user types 'DELETE' in first_amount (completed)" width="1860"/>
+                <img src="a29d9571271a3760ec1ee4c3a4d66046161404043a3c9d2730e47cd9ed1151d1.png" title=" user enters '2' into first_amount" width="1860"/>
+                <img src="c7748da9b41e84252922251ba33469b7400ca2e4a136a60b960e14f649b83b12.png" title=" user enters '2' into first_amount (completed)" width="1860"/>
+                <img src="c7748da9b41e84252922251ba33469b7400ca2e4a136a60b960e14f649b83b12.png" title=" user clicks on add_cart" width="1860"/>
+                <img src="efbf4b148ebdf48919aa5d262749d2a2d5fb4d549b8a66c310e294d56d01b55c.png" title=" user clicks on add_cart" width="1860"/>
+                <img src="d6db317d8d861a21c2112d6161910e3cd803cb37181da9351abe7744de58ba33.png" title=" user clicks on add_cart (completed)" width="1860"/>
+                <img src="d6db317d8d861a21c2112d6161910e3cd803cb37181da9351abe7744de58ba33.png" title=" user clicks on return_menu" width="1860"/>
+                <img src="d1effa0b194f3a0c08981ab53bf0c0d41b7a94a659ca8b8fb71c2d395f81a091.png" title=" user clicks on return_menu" width="1860"/>
+                <img src="19918fd8b85f88ea1e8aacea91604c9f9333231323a9767182761139f66d0496.png" title=" user clicks on return_menu (completed)" width="1860"/>
+                <img src="19918fd8b85f88ea1e8aacea91604c9f9333231323a9767182761139f66d0496.png" title=" user clicks on second" width="1860"/>
+                <img src="42660f904d820a0cd7b26e1765860d9b75f77f07641003bc926574129f4b583f.png" title=" user clicks on second (completed)" width="1860"/>
+                <img src="42660f904d820a0cd7b26e1765860d9b75f77f07641003bc926574129f4b583f.png" title=" user clicks on second_amount" width="1860"/>
+                <img src="880fdd6799f2925f97b03d75ddc759184dec330a837e40d7272ebc32705c7c09.png" title=" user clicks on second_amount (completed)" width="1860"/>
+                <img src="880fdd6799f2925f97b03d75ddc759184dec330a837e40d7272ebc32705c7c09.png" title=" user types 'DELETE' in second_amount" width="1860"/>
+                <img src="ccd1835c94050ebcde5d6542b3494b859102367dd1bc3223fdf5957eb9c43704.png" title=" user types 'DELETE' in second_amount (completed)" width="1860"/>
+                <img src="ccd1835c94050ebcde5d6542b3494b859102367dd1bc3223fdf5957eb9c43704.png" title=" user enters '' into first_amount" width="1860"/>
+                <img src="ff2b6512f5013fb1a6a2862100d713582a7c9061415154f000f80bac85ee37a5.png" title=" user enters '' into first_amount (completed)" width="1860"/>
+                <img src="ff2b6512f5013fb1a6a2862100d713582a7c9061415154f000f80bac85ee37a5.png" title=" user clicks on add_cart" width="1860"/>
+                <img src="e1fb083e0b64d5d52d818cf7f5c476adc83a6f4784ef60baf97eb415cce046f9.png" title=" user clicks on add_cart (completed)" width="1860"/>
+                <img src="e1fb083e0b64d5d52d818cf7f5c476adc83a6f4784ef60baf97eb415cce046f9.png" title=" User cart products select (completed)" width="1860"/>
+                <img src="e1fb083e0b64d5d52d818cf7f5c476adc83a6f4784ef60baf97eb415cce046f9.png" title=" When the user enter first product and adds it to the cart
+| Amount2 |
+| 2 | (completed)" width="1860"/>
+                <img src="e1fb083e0b64d5d52d818cf7f5c476adc83a6f4784ef60baf97eb415cce046f9.png" title=" And the user enter second product and adds it to the cart
+| Amount5 |
+| 5 |" width="1860"/>
+                <img src="e1fb083e0b64d5d52d818cf7f5c476adc83a6f4784ef60baf97eb415cce046f9.png" title=" User cart products select" width="1860"/>
+                <img src="e1fb083e0b64d5d52d818cf7f5c476adc83a6f4784ef60baf97eb415cce046f9.png" title=" user clicks on first" width="1860"/>
+                <img src="8880f079e8ffb5c1a2be15e159bb6b12e6eb6f46f2da926c5c6093f2162ec6b2.png" title=" user clicks on first (completed): <span class='failing-color'>FAILURE</span>" width="1860"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.0</span>
+</div>
+</body>
+</html>
